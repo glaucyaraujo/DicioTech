@@ -90,6 +90,14 @@ class TermoController {
       }
     });
   };
+  static deleteAllTermos = async (req, res) => {
+    try {
+      await termos.deleteMany({});
+      res.status(200).send({ message: "Todos os termos foram removidos com sucesso" });
+    } catch (error) {
+      res.status(500).send({ message: error.message });
+    }
+  };
 }
 
 export default TermoController;

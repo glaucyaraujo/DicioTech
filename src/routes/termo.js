@@ -11,6 +11,6 @@ router
 .get("/:id", TermoController.getByIdTermo)
 .get("/categoria/:categoria", TermoController.getTermoByCategoria)
 .get("/inicial/:inicial", TermoController.getTermoByInicial)
-
+.delete("/", TermoController.deleteAllTermos)
 
 export default router;
